@@ -1,5 +1,9 @@
 {
   "name": "wukong-parser",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
   "devDependencies": {
     "typescript": "^4.5.5"
   }

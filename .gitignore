@@ -11,3 +11,6 @@
 
 # osx
 .DS_Store
+
+# ignore generated
+packages/*/lib/*
