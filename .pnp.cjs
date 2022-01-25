@@ -42,6 +42,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["eslint", "npm:8.7.0"],
             ["eslint-config-airbnb-base", "virtual:611b1d55216d6f8edc9d9d3592a0da07039e438e678924aa2de94c645a1517e4494aef3bacb0d35cf4396d1072c46452c89e7f35b7194797cc4fd6273b18ad63#npm:15.0.0"],
+            ["eslint-config-prettier", "virtual:611b1d55216d6f8edc9d9d3592a0da07039e438e678924aa2de94c645a1517e4494aef3bacb0d35cf4396d1072c46452c89e7f35b7194797cc4fd6273b18ad63#npm:8.3.0"],
             ["prettier", "npm:2.5.1"]
           ],
           "linkType": "SOFT",
@@ -429,6 +430,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "@types/eslint-plugin-import",
             "@types/eslint",
             "eslint-plugin-import",
+            "eslint"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["eslint-config-prettier", [
+        ["npm:8.3.0", {
+          "packageLocation": "./.yarn/cache/eslint-config-prettier-npm-8.3.0-f540cd1f53-df4cea3032.zip/node_modules/eslint-config-prettier/",
+          "packageDependencies": [
+            ["eslint-config-prettier", "npm:8.3.0"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:611b1d55216d6f8edc9d9d3592a0da07039e438e678924aa2de94c645a1517e4494aef3bacb0d35cf4396d1072c46452c89e7f35b7194797cc4fd6273b18ad63#npm:8.3.0", {
+          "packageLocation": "./.yarn/__virtual__/eslint-config-prettier-virtual-97f08b14db/0/cache/eslint-config-prettier-npm-8.3.0-f540cd1f53-df4cea3032.zip/node_modules/eslint-config-prettier/",
+          "packageDependencies": [
+            ["eslint-config-prettier", "virtual:611b1d55216d6f8edc9d9d3592a0da07039e438e678924aa2de94c645a1517e4494aef3bacb0d35cf4396d1072c46452c89e7f35b7194797cc4fd6273b18ad63#npm:8.3.0"],
+            ["@types/eslint", null],
+            ["eslint", "npm:8.7.0"]
+          ],
+          "packagePeers": [
+            "@types/eslint",
             "eslint"
           ],
           "linkType": "HARD",
@@ -1364,6 +1387,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["wukong", "workspace:."],
             ["eslint", "npm:8.7.0"],
             ["eslint-config-airbnb-base", "virtual:611b1d55216d6f8edc9d9d3592a0da07039e438e678924aa2de94c645a1517e4494aef3bacb0d35cf4396d1072c46452c89e7f35b7194797cc4fd6273b18ad63#npm:15.0.0"],
+            ["eslint-config-prettier", "virtual:611b1d55216d6f8edc9d9d3592a0da07039e438e678924aa2de94c645a1517e4494aef3bacb0d35cf4396d1072c46452c89e7f35b7194797cc4fd6273b18ad63#npm:8.3.0"],
             ["prettier", "npm:2.5.1"]
           ],
           "linkType": "SOFT",
