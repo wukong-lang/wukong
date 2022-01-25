@@ -43,6 +43,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint", "npm:8.7.0"],
             ["eslint-config-airbnb-base", "virtual:611b1d55216d6f8edc9d9d3592a0da07039e438e678924aa2de94c645a1517e4494aef3bacb0d35cf4396d1072c46452c89e7f35b7194797cc4fd6273b18ad63#npm:15.0.0"],
             ["eslint-config-prettier", "virtual:611b1d55216d6f8edc9d9d3592a0da07039e438e678924aa2de94c645a1517e4494aef3bacb0d35cf4396d1072c46452c89e7f35b7194797cc4fd6273b18ad63#npm:8.3.0"],
+            ["husky", "npm:7.0.4"],
+            ["pinst", "npm:2.1.6"],
             ["prettier", "npm:2.5.1"],
             ["typescript", "patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=493e53"]
           ],
@@ -615,6 +617,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["fromentries", [
+        ["npm:1.3.2", {
+          "packageLocation": "../../../.yarn/berry/cache/fromentries-npm-1.3.2-f5392090b8-8.zip/node_modules/fromentries/",
+          "packageDependencies": [
+            ["fromentries", "npm:1.3.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["fs.realpath", [
         ["npm:1.0.0", {
           "packageLocation": "../../../.yarn/berry/cache/fs.realpath-npm-1.0.0-c8f05d8126-8.zip/node_modules/fs.realpath/",
@@ -743,6 +754,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["has-tostringtag", "npm:1.0.0"],
             ["has-symbols", "npm:1.0.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["husky", [
+        ["npm:7.0.4", {
+          "packageLocation": "../../../.yarn/berry/cache/husky-npm-7.0.4-917ba035c6-8.zip/node_modules/husky/",
+          "packageDependencies": [
+            ["husky", "npm:7.0.4"]
           ],
           "linkType": "HARD",
         }]
@@ -1124,6 +1144,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["pinst", [
+        ["npm:2.1.6", {
+          "packageLocation": "../../../.yarn/berry/cache/pinst-npm-2.1.6-750cbdedeb-8.zip/node_modules/pinst/",
+          "packageDependencies": [
+            ["pinst", "npm:2.1.6"],
+            ["fromentries", "npm:1.3.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["prelude-ls", [
         ["npm:1.2.1", {
           "packageLocation": "../../../.yarn/berry/cache/prelude-ls-npm-1.2.1-3e4d272a55-8.zip/node_modules/prelude-ls/",
@@ -1389,6 +1419,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint", "npm:8.7.0"],
             ["eslint-config-airbnb-base", "virtual:611b1d55216d6f8edc9d9d3592a0da07039e438e678924aa2de94c645a1517e4494aef3bacb0d35cf4396d1072c46452c89e7f35b7194797cc4fd6273b18ad63#npm:15.0.0"],
             ["eslint-config-prettier", "virtual:611b1d55216d6f8edc9d9d3592a0da07039e438e678924aa2de94c645a1517e4494aef3bacb0d35cf4396d1072c46452c89e7f35b7194797cc4fd6273b18ad63#npm:8.3.0"],
+            ["husky", "npm:7.0.4"],
+            ["pinst", "npm:2.1.6"],
             ["prettier", "npm:2.5.1"],
             ["typescript", "patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=493e53"]
           ],
