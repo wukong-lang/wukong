@@ -43,7 +43,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint", "npm:8.7.0"],
             ["eslint-config-airbnb-base", "virtual:611b1d55216d6f8edc9d9d3592a0da07039e438e678924aa2de94c645a1517e4494aef3bacb0d35cf4396d1072c46452c89e7f35b7194797cc4fd6273b18ad63#npm:15.0.0"],
             ["eslint-config-prettier", "virtual:611b1d55216d6f8edc9d9d3592a0da07039e438e678924aa2de94c645a1517e4494aef3bacb0d35cf4396d1072c46452c89e7f35b7194797cc4fd6273b18ad63#npm:8.3.0"],
-            ["prettier", "npm:2.5.1"]
+            ["prettier", "npm:2.5.1"],
+            ["typescript", "patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=493e53"]
           ],
           "linkType": "SOFT",
         }]
@@ -1388,7 +1389,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint", "npm:8.7.0"],
             ["eslint-config-airbnb-base", "virtual:611b1d55216d6f8edc9d9d3592a0da07039e438e678924aa2de94c645a1517e4494aef3bacb0d35cf4396d1072c46452c89e7f35b7194797cc4fd6273b18ad63#npm:15.0.0"],
             ["eslint-config-prettier", "virtual:611b1d55216d6f8edc9d9d3592a0da07039e438e678924aa2de94c645a1517e4494aef3bacb0d35cf4396d1072c46452c89e7f35b7194797cc4fd6273b18ad63#npm:8.3.0"],
-            ["prettier", "npm:2.5.1"]
+            ["prettier", "npm:2.5.1"],
+            ["typescript", "patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=493e53"]
           ],
           "linkType": "SOFT",
         }]
