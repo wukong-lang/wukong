@@ -44,6 +44,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "SOFT",
         }]
       ]],
+      ["typescript", [
+        ["patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=493e53", {
+          "packageLocation": "./.yarn/cache/typescript-patch-3020d8933d-c05c318d79.zip/node_modules/typescript/",
+          "packageDependencies": [
+            ["typescript", "patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=493e53"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["wukong", [
         ["workspace:.", {
           "packageLocation": "./",
@@ -57,7 +66,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         ["workspace:packages/wukong-parser", {
           "packageLocation": "./packages/wukong-parser/",
           "packageDependencies": [
-            ["wukong-parser", "workspace:packages/wukong-parser"]
+            ["wukong-parser", "workspace:packages/wukong-parser"],
+            ["typescript", "patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=493e53"]
           ],
           "linkType": "SOFT",
         }]

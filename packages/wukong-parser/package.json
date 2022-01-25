@@ -1,3 +1,6 @@
 {
-  "name": "wukong-parser"
+  "name": "wukong-parser",
+  "devDependencies": {
+    "typescript": "^4.5.5"
+  }
 }
