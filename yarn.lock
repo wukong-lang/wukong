@@ -4,6 +4,12 @@
 __metadata:
   version: 5
 
+"wukong-parser@workspace:packages/wukong-parser":
+  version: 0.0.0-use.local
+  resolution: "wukong-parser@workspace:packages/wukong-parser"
+  languageName: unknown
+  linkType: soft
+
 "wukong@workspace:.":
   version: 0.0.0-use.local
   resolution: "wukong@workspace:."

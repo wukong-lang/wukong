@@ -21,12 +21,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       {
         "name": "wukong",
         "reference": "workspace:."
+      },
+      {
+        "name": "wukong-parser",
+        "reference": "workspace:packages/wukong-parser"
       }
     ],
     "enableTopLevelFallback": true,
     "ignorePatternData": "(^(?:\\.yarn\\/sdks(?:\\/(?!\\.{1,2}(?:\\/|$))(?:(?:(?!(?:^|\\/)\\.{1,2}(?:\\/|$)).)*?)|$))$)",
     "fallbackExclusionList": [
-      ["wukong", ["workspace:."]]
+      ["wukong", ["workspace:."]],
+      ["wukong-parser", ["workspace:packages/wukong-parser"]]
     ],
     "fallbackPool": [
     ],
@@ -44,6 +49,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["wukong", "workspace:."]
+          ],
+          "linkType": "SOFT",
+        }]
+      ]],
+      ["wukong-parser", [
+        ["workspace:packages/wukong-parser", {
+          "packageLocation": "./packages/wukong-parser/",
+          "packageDependencies": [
+            ["wukong-parser", "workspace:packages/wukong-parser"]
           ],
           "linkType": "SOFT",
         }]
