@@ -14,11 +14,14 @@ const MOCK_DATA: Data = {
 
 describe('skipSpace', () => {
   it('should skip leading spaces', () => {
-    const data = { ...MOCK_DATA, input: '   token' }
+    const data = {
+      ...MOCK_DATA,
+      input: `${String.fromCodePoint(32, 32, 32, 32)}token`,
+    }
 
     const result = skipSpace(data)
 
-    expect(result).toEqual({ ...data, state: { position: 3 } })
+    expect(result).toEqual({ ...data, state: { position: 4 } })
   })
 
   it('should skip leading non breaking spaces', () => {
