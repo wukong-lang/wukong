@@ -5,7 +5,7 @@
     "packages/*"
   ],
   "scripts": {
-    "test": "yarn run jest",
+    "test": "yarn run jest --collect-coverage",
     "lint": "yarn run eslint . --ext .js,.ts",
     "postinstall": "husky install",
     "prepublishOnly": "pinst --disable",

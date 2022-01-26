@@ -12,5 +12,8 @@
 # osx
 .DS_Store
 
-# ignore generated
+# tsc compiled
 packages/*/lib/*
+
+# coverage
+coverage
