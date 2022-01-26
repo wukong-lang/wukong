@@ -19,7 +19,7 @@ export type Data = {
 }
 
 const isSpace = (char: number) =>
-  char === Char.Space || char === Char.NonBreakingSpace
+  char === Char.Space || char === Char.NonBreakingSpace || char === Char.Tab
 
 export const skipSpace = ({
   input,

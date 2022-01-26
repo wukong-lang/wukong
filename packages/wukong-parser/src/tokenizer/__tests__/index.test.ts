@@ -31,4 +31,15 @@ describe('skipSpace', () => {
 
     expect(result).toEqual({ ...data, state: { position: 2 } })
   })
+
+  it('should skip leading tabs', () => {
+    const data = {
+      ...MOCK_DATA,
+      input: `${String.fromCodePoint(9, 9, 9)}token`,
+    }
+
+    const result = skipSpace(data)
+
+    expect(result).toEqual({ ...data, state: { position: 3 } })
+  })
 })
