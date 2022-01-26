@@ -27,7 +27,10 @@ export const skipSpace = ({
   let current = state.position
   let char = input.charCodeAt(current)
 
-  while (current < input.length && char === Char.Space) {
+  while (
+    current < input.length &&
+    (char === Char.Space || char === Char.NonBreakingSpace)
+  ) {
     current += 1
 
     char = input.charCodeAt(current)
