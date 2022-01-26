@@ -69,4 +69,15 @@ describe('skipSpace', () => {
 
     expect(result).toEqual({ ...data, state: { position: 2 } })
   })
+
+  it('should skip line separator', () => {
+    const data = {
+      ...MOCK_DATA,
+      input: `${String.fromCodePoint(8232)}token`,
+    }
+
+    const result = skipSpace(data)
+
+    expect(result).toEqual({ ...data, state: { position: 1 } })
+  })
 })
