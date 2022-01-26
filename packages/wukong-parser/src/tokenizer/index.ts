@@ -21,6 +21,11 @@ export type Data = {
 const isSpace = (char: number) =>
   char === Char.Space || char === Char.NonBreakingSpace || char === Char.Tab
 
+const isBreakingSpace = (char: number) =>
+  char === Char.LineFeed ||
+  char === Char.LineSeparator ||
+  char === Char.ParagraphSeparator
+
 export const skipSpace = ({
   input,
   state,
@@ -45,11 +50,7 @@ export const skipSpace = ({
       continue
     }
 
-    if (
-      char === Char.LineFeed ||
-      char === Char.LineSeparator ||
-      char === Char.ParagraphSeparator
-    ) {
+    if (isBreakingSpace(char)) {
       current += 1
       continue
     }
