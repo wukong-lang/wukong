@@ -68,7 +68,7 @@ export enum Char {
   UppercaseZ = 90, //  'Z'
 
   LeftSquareBracket = 91, //  '['
-  BackSlash = 92, //  '\    '
+  Backslash = 92, //  '\    '
   RightSquareBracket = 93, //  ']'
   Caret = 94, //  '^'
   Underscore = 95, //  '_'
