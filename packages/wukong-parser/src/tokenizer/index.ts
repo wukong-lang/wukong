@@ -45,6 +45,11 @@ export const skipSpace = ({
       continue
     }
 
+    if (char === Char.LineFeed) {
+      current += 1
+      continue
+    }
+
     break
   }
 
