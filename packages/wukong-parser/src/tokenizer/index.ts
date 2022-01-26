@@ -18,6 +18,9 @@ export type Data = {
   }
 }
 
+const isSpace = (char: number) =>
+  char === Char.Space || char === Char.NonBreakingSpace
+
 export const skipSpace = ({
   input,
   state,
@@ -27,10 +30,7 @@ export const skipSpace = ({
   let current = state.position
   let char = input.charCodeAt(current)
 
-  while (
-    current < input.length &&
-    (char === Char.Space || char === Char.NonBreakingSpace)
-  ) {
+  while (current < input.length && isSpace(char)) {
     current += 1
 
     char = input.charCodeAt(current)
