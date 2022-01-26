@@ -47,4 +47,15 @@ describe('skipSpace', () => {
       expect(result).toEqual({ ...data, state: { position: 3 } })
     })
   })
+
+  it('should skip carriage return followed by line feed', () => {
+    const data = {
+      ...MOCK_DATA,
+      input: `${String.fromCodePoint(13, 10)}token`,
+    }
+
+    const result = skipSpace(data)
+
+    expect(result).toEqual({ ...data, state: { position: 2 } })
+  })
 })

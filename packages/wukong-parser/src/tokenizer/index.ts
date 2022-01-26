@@ -28,12 +28,24 @@ export const skipSpace = ({
   output: { comments, ...rest },
 }: Data): Data => {
   let current = state.position
-  let char = input.charCodeAt(current)
 
-  while (current < input.length && isSpace(char)) {
-    current += 1
+  while (current < input.length) {
+    const char = input.charCodeAt(current)
 
-    char = input.charCodeAt(current)
+    if (isSpace(char)) {
+      current += 1
+      continue
+    }
+
+    if (
+      char === Char.CarriageReturn &&
+      input.charCodeAt(current + 1) === Char.LineFeed
+    ) {
+      current += 2
+      continue
+    }
+
+    break
   }
 
   return {
