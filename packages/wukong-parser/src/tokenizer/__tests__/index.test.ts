@@ -14,7 +14,7 @@ const MOCK_DATA: Data = {
 
 describe('skipSpace', () => {
   describe('non breaking space', () => {
-    it('should skip leading spaces', () => {
+    it('should skip spaces', () => {
       const data = {
         ...MOCK_DATA,
         input: `${String.fromCodePoint(32, 32, 32, 32)}token`,
@@ -25,7 +25,7 @@ describe('skipSpace', () => {
       expect(result).toEqual({ ...data, state: { position: 4 } })
     })
 
-    it('should skip leading non breaking spaces', () => {
+    it('should skip non breaking spaces', () => {
       const data = {
         ...MOCK_DATA,
         input: `${String.fromCodePoint(160, 160)}token`,
@@ -36,7 +36,7 @@ describe('skipSpace', () => {
       expect(result).toEqual({ ...data, state: { position: 2 } })
     })
 
-    it('should skip leading tabs', () => {
+    it('should skip tabs', () => {
       const data = {
         ...MOCK_DATA,
         input: `${String.fromCodePoint(9, 9, 9)}token`,
