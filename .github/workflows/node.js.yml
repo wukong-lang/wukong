@@ -19,10 +19,13 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - name: Check
+      - name: Setup
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'yarn'
-      - run: yarn
-      - run: yarn run lint
+        run: yarn
+      - name: Check
+        run: yarn run lint
+      - name: Test
+        run: yarn test
