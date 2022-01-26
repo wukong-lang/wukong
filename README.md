@@ -1,6 +1,8 @@
-# WuKong [![CI][ci-image]][ci-url] [![javascript style guide][standard-image]][standard-url]
+# WuKong [![CI][ci-image]][ci-url] [![lint][standard-image]][standard-url] [![formatting][prettier-image]][prettier-url]
 
 [ci-image]: https://github.com/wukong-lang/wukong/actions/workflows/node.js.yml/badge.svg
 [ci-url]: https://github.com/wukong-lang/wukong/actions/workflows/node.js.yml
 [standard-image]: https://img.shields.io/badge/code_style-standard-brightgreen.svg
 [standard-url]: https://standardjs.com
+[prettier-image]: https://img.shields.io/badge/code_style-prettier-ff69b4.svg
+[prettier-url]: https://github.com/prettier/prettier
