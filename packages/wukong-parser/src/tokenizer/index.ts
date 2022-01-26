@@ -1,8 +1,7 @@
 import { Char } from '../strings/Char'
 
-interface State {
+type State = {
   position: number
-  line: number
 }
 
 type Options = {

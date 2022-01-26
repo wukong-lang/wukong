@@ -1,7 +1,7 @@
 import { Data, skipSpace } from '..'
 
 const MOCK_DATA: Data = {
-  state: { position: 0, line: 0 },
+  state: { position: 0 },
   options: {
     attachComment: false,
     inModule: false,
@@ -19,7 +19,7 @@ describe('skipSpace', () => {
     const result = skipSpace(data)
 
     expect(result).toEqual({
-      state: { position: 3, line: 0 },
+      state: { position: 3 },
       options: {
         attachComment: false,
         inModule: false,
