@@ -18,16 +18,6 @@ describe('skipSpace', () => {
 
     const result = skipSpace(data)
 
-    expect(result).toEqual({
-      state: { position: 3 },
-      options: {
-        attachComment: false,
-        inModule: false,
-      },
-      input: '   token',
-      output: {
-        comments: [],
-      },
-    })
+    expect(result).toEqual({ ...data, state: { position: 3 } })
   })
 })
