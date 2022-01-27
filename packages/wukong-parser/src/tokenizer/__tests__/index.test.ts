@@ -1,4 +1,4 @@
-import { Data, skipBlockComment, skipSpace } from '..'
+import { Data, skipBlockComment, skipLineComment, skipSpace } from '..'
 import { Exception } from '../../constants/Exception'
 
 const MOCK_DATA: Data = {
@@ -125,5 +125,24 @@ describe('skipBlockComment', () => {
     expect(() => skipBlockComment(data)).toThrow(
       Error(Exception.UnterminatedComment)
     )
+  })
+})
+
+describe('skipLineComment', () => {
+  it('should return the line comment', () => {
+    const data = {
+      ...MOCK_DATA,
+      input: '// this is a line comment \nohter line',
+    }
+
+    const result = skipLineComment(data)
+
+    expect(result).toEqual({
+      ...data,
+      state: { position: 26 },
+      output: {
+        comments: [' this is a line comment '],
+      },
+    })
   })
 })

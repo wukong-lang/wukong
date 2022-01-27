@@ -1,5 +1,6 @@
 import { Char } from '../constants/Char'
 import { Exception } from '../constants/Exception'
+import { isNewLine } from './utils/whitespace'
 
 type State = {
   position: number
@@ -89,4 +90,21 @@ export const skipBlockComment = ({
   output.comments.push(input.substring(start + '/*'.length, end))
 
   return { ...rest, state: { position: end + '*/'.length }, input, output }
+}
+
+export const skipLineComment = ({
+  input,
+  state,
+  output,
+  ...rest
+}: Data): Data => {
+  const start = input.indexOf('//', state.position)
+  let end = start + '//'.length
+  while (end < input.length && !isNewLine(input.charCodeAt(end))) {
+    end += 1
+  }
+
+  output.comments.push(input.substring(start + '//'.length, end))
+
+  return { ...rest, input, state: { position: end }, output }
 }
