@@ -1,4 +1,4 @@
-import { Char } from '../strings/Char'
+import { Char } from '../constants/Char'
 
 type State = {
   position: number

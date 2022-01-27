@@ -1,4 +1,4 @@
-import { Char } from '../../strings/Char'
+import { Char } from '../../constants/Char'
 import { equal } from './fp'
 
 const NEW_LINE_SEPERATARS = [
