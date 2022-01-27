@@ -1,7 +1,7 @@
 import { Data, skipBlockComment, skipLineComment, skipSpace } from '..'
 import { Exception } from '../../constants/Exception'
 
-const MOCK_DATA: Data = {
+const buildMockData = (): Data => ({
   state: { position: 0 },
   options: {
     attachComment: false,
@@ -11,13 +11,13 @@ const MOCK_DATA: Data = {
   output: {
     comments: [],
   },
-}
+})
 
 describe('skipSpace', () => {
   describe('non breaking space', () => {
     it('should skip spaces', () => {
       const data = {
-        ...MOCK_DATA,
+        ...buildMockData(),
         input: `${String.fromCodePoint(32, 32, 32, 32)}token`,
       }
 
@@ -28,7 +28,7 @@ describe('skipSpace', () => {
 
     it('should skip non breaking spaces', () => {
       const data = {
-        ...MOCK_DATA,
+        ...buildMockData(),
         input: `${String.fromCodePoint(160, 160)}token`,
       }
 
@@ -39,7 +39,7 @@ describe('skipSpace', () => {
 
     it('should skip tabs', () => {
       const data = {
-        ...MOCK_DATA,
+        ...buildMockData(),
         input: `${String.fromCodePoint(9, 9, 9)}token`,
       }
 
@@ -52,7 +52,7 @@ describe('skipSpace', () => {
   describe('breaking space', () => {
     it('should skip carriage return followed by line feed', () => {
       const data = {
-        ...MOCK_DATA,
+        ...buildMockData(),
         input: `${String.fromCodePoint(13, 10)}token`,
       }
 
@@ -63,7 +63,7 @@ describe('skipSpace', () => {
 
     it('should skip line feed', () => {
       const data = {
-        ...MOCK_DATA,
+        ...buildMockData(),
         input: `${String.fromCodePoint(10, 10)}token`,
       }
 
@@ -74,7 +74,7 @@ describe('skipSpace', () => {
 
     it('should skip line separator', () => {
       const data = {
-        ...MOCK_DATA,
+        ...buildMockData(),
         input: `${String.fromCodePoint(8232)}token`,
       }
 
@@ -85,7 +85,7 @@ describe('skipSpace', () => {
 
     it('should skip paragraph separator', () => {
       const data = {
-        ...MOCK_DATA,
+        ...buildMockData(),
         input: `${String.fromCodePoint(8233)}token`,
       }
 
@@ -99,7 +99,7 @@ describe('skipSpace', () => {
 describe('skipBlockComment', () => {
   it('should return the comments', () => {
     const data = {
-      ...MOCK_DATA,
+      ...buildMockData(),
       input: '/* this is a block comment */ other token',
     }
 
@@ -118,7 +118,7 @@ describe('skipBlockComment', () => {
 
   it('should throw error when no block comment end found', () => {
     const data = {
-      ...MOCK_DATA,
+      ...buildMockData(),
       input: '/* this is a block comment other token',
     }
 
@@ -131,7 +131,7 @@ describe('skipBlockComment', () => {
 describe('skipLineComment', () => {
   it('should return the line comment', () => {
     const data = {
-      ...MOCK_DATA,
+      ...buildMockData(),
       input: '// this is a line comment \nohter line',
     }
 
