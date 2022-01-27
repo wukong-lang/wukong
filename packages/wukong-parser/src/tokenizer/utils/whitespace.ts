@@ -9,7 +9,5 @@ const NEW_LINE_SEPERATARS = [
 ]
 
 // https://tc39.github.io/ecma262/#sec-line-terminators
-export function isNewLine(char: number): boolean {
-  const equalToInput = equal(char)
-  return NEW_LINE_SEPERATARS.some(equalToInput)
-}
+export const isNewLine = (char: number): boolean =>
+  NEW_LINE_SEPERATARS.some(equal(char))
