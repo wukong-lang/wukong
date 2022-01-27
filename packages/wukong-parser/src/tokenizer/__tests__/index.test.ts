@@ -1,4 +1,4 @@
-import { Data, skipSpace } from '..'
+import { Data, skipBlockComment, skipSpace } from '..'
 
 const MOCK_DATA: Data = {
   state: { position: 0 },
@@ -91,6 +91,27 @@ describe('skipSpace', () => {
       const result = skipSpace(data)
 
       expect(result).toEqual({ ...data, state: { position: 1 } })
+    })
+  })
+})
+
+describe('skipBlockComment', () => {
+  it('should return the comments', () => {
+    const data = {
+      ...MOCK_DATA,
+      input: '/* this is a block comment */ other token',
+    }
+
+    const result = skipBlockComment(data)
+
+    expect(result).toEqual({
+      ...data,
+      state: {
+        position: 29,
+      },
+      output: {
+        comments: [' this is a block comment '],
+      },
     })
   })
 })

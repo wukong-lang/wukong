@@ -14,7 +14,7 @@ export type Data = {
   options: Options
   input: string
   output: {
-    comments: []
+    comments: string[]
   }
 }
 
@@ -70,4 +70,17 @@ export const skipSpace = ({
       comments,
     },
   }
+}
+
+export const skipBlockComment = ({
+  input,
+  state,
+  output,
+  ...rest
+}: Data): Data => {
+  const start = input.indexOf('/*', state.position)
+  const end = input.indexOf('*/', start + '/*'.length)
+  output.comments.push(input.substring(start + '/*'.length, end))
+
+  return { ...rest, state: { position: end + '*/'.length }, input, output }
 }
