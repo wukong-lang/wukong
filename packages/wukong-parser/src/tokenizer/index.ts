@@ -1,4 +1,5 @@
 import { Char } from '../constants/Char'
+import { Exception } from '../constants/Exception'
 
 type State = {
   position: number
@@ -80,6 +81,11 @@ export const skipBlockComment = ({
 }: Data): Data => {
   const start = input.indexOf('/*', state.position)
   const end = input.indexOf('*/', start + '/*'.length)
+
+  if (end < 0) {
+    throw Error(Exception.UnterminatedComment)
+  }
+
   output.comments.push(input.substring(start + '/*'.length, end))
 
   return { ...rest, state: { position: end + '*/'.length }, input, output }
